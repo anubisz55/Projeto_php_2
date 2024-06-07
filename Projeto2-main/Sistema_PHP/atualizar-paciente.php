@@ -80,7 +80,7 @@
             aviso_usuario_existente();
         } else {
             // Prepara e executa a consulta SQL para atualizar os dados do paciente
-            $atualizacao = $conexao->prepare("UPDATE pacientes SET nome=:nome, nome_tutor=:nome_tutor, nome_tutora=:nome_tutora,endereco=:endereco, telefone=:telefone, usuario=:usuario WHERE id=:id;");
+            $atualizacao = $conexao->prepare("UPDATE clinica_veterinaria SET nome=:nome, nome_tutor=:nome_tutor, nome_tutora=:nome_tutora,endereco=:endereco, telefone=:telefone, usuario=:usuario WHERE id=:id;");
             $atualizacao->bindValue(':nome', $nome);
             $atualizacao->bindValue(':nome_tutor', $nome_tutor);
             $atualizacao->bindValue(':nome_tutora', $nome_tutora);

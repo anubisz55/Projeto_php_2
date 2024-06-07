@@ -13,7 +13,7 @@
             // Obtém o ID do paciente a ser deletado da URL
             $id = $_GET['id'];
             // Prepara e executa a consulta SQL para deletar o paciente
-            $deletar = $conexao->prepare("DELETE FROM pacientes WHERE id = '$id';");
+            $deletar = $conexao->prepare("DELETE FROM clinica_veterinaria WHERE id = '$id';");
             $deletar->execute();
             // Redireciona para a página de listagem de pacientes após a exclusão
             header('location:listar-pacientes.php');

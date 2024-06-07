@@ -1,3 +1,12 @@
+<?php
+require 'conexao.php';
+
+$lista = [];
+$sql = $pdo->query("SELECT * FROM clinica_veterinaria");
+if($sql->rowCount()> 0){
+    $lista = $sql->fetchAll(PDO::FETCH_ASSOC);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,6 +19,8 @@
 <body>
 
     <?php 
+    
+        require 'conexao.php';
         // Inclui os módulos necessários para o funcionamento do sistema
         require 'modulos.php';
         // Inclui o menu de navegação
@@ -76,7 +87,7 @@
         }
 
         // Prepara e executa a consulta SQL para verificar o usuário e senha
-        $dados = $conexao->prepare("SELECT senha, nome FROM pacientes WHERE usuario = :usuario;");
+        $dados = $conexao->prepare("SELECT senha, nome FROM clinica_veterinaria WHERE usuario = :usuario;");
         $dados->bindValue(':usuario', $usuario);
         $dados->execute();
 

@@ -9,7 +9,7 @@
         // Requer novamente o arquivo de conexão com o banco de dados
         require 'conexao.php';
         // Prepara e executa a consulta SQL para obter todos os usuários
-        $dados = $conexao->prepare("SELECT usuario FROM pacientes;");
+        $dados = $conexao->prepare("SELECT usuario FROM clinica_veterinaria;");
         $dados->execute();
         // Obtém todos os usuários do banco de dados
         $users = $dados->fetchAll(PDO::FETCH_OBJ);

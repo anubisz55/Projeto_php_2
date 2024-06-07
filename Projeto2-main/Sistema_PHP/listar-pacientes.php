@@ -12,6 +12,7 @@
 <body>
 
     <?php
+
         // Inclui os módulos necessários para o funcionamento do sistema
         require 'modulos.php';
         require 'conexao.php';
@@ -31,7 +32,7 @@
         <ul>
             <?php 
                 // Prepara a consulta SQL para obter todos os pacientes
-                $dados = $conexao->prepare("SELECT * FROM pacientes");
+                $dados = $conexao->prepare("SELECT * FROM clinica_veterinaria");
                 $dados->execute(); // Executa a consulta
 
                 // Inicializa um contador de pacientes listados

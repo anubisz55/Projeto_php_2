@@ -83,7 +83,7 @@
             $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
             // Prepara e executa a consulta SQL para cadastrar o novo usuário
             $cadastro = $conexao->prepare(
-                "INSERT INTO pacientes (nome, endereco, nome_tutor, nome_tutora, telefone, usuario, senha) VALUES (:nome, :nome_tutor, :nome_tutora, :endereco, :telefone, :usuario, :senha);"
+                "INSERT INTO test (nome, endereco, nome_tutor, nome_tutora, telefone, usuario, senha) VALUES (:nome, :nome_tutor, :nome_tutora, :endereco, :telefone, :usuario, :senha);"
             );
             $cadastro->bindValue(":nome", $nome);
             $cadastro->bindValue(":nome_tutor", $nome_tutor);
