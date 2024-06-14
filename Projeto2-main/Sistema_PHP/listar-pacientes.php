@@ -17,7 +17,8 @@
         require 'modulos.php';
         require 'conexao.php';
         include 'menu.html';
-        
+        include 'config.php';
+
         // Inicia uma sessão PHP
         session_start();
 

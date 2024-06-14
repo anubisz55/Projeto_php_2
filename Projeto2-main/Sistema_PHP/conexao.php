@@ -49,6 +49,9 @@ try {
     echo "Código do erro: " . $erro->getCode();
     // Interrompe a execução do script
     exit();
+}finally {
+    // Fecha a conexão
+    $conexao = null;
 }
 
 ?>
